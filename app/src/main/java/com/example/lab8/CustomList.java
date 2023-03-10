@@ -44,6 +44,9 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
+    public int countCities() {
+        return 0;
+    }
 
     public int getCount(){
         return cities.size();

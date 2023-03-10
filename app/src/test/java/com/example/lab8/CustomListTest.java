@@ -1,6 +1,7 @@
 package com.example.lab8;
 
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -11,6 +12,13 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class CustomListTest {
-
+    @Test
+    public void add(){
+        CustomList mocklist;
+        mocklist =  new CustomList(null, new ArrayList<City>());
+        City city = new City("NEW CITY", "NEW PROVINCE");
+        mocklist.addCity(city);
+        assertTrue( mocklist.countCities() == 1);
+    }
 
 }
