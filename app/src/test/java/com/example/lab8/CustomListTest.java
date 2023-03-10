@@ -21,4 +21,13 @@ public class CustomListTest {
         assertTrue( mocklist.countCities() == 1);
     }
 
+    @Test
+    public void has() {
+        CustomList mocklist;
+        mocklist =  new CustomList(null, new ArrayList<City>());
+        City city = new City("NEW CITY", "NEW PROVINCE");
+        mocklist.addCity(city);
+        assertEquals(true, mocklist.hasCity(city));
+    }
+
 }
