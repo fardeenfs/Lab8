@@ -29,8 +29,8 @@ public class CustomList extends ArrayAdapter<City> {
 
         View view = convertView;
 
-        if(view == null){
-            view = LayoutInflater.from(context).inflate(R.layout.content, parent,false);
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.content, parent, false);
         }
 
         City city = cities.get(position);
@@ -44,16 +44,21 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
-    public int countCities() {
-        return 0;
-    }
 
-    public int getCount(){
+    public int getCount() {
         return cities.size();
     }
 
-    public void addCity(City city){
-
+    public void addCity(City city) {
+        cities.add(city);
     }
+
+    public int countCities() {
+        return cities.size();
+    }
+
+
+
+
 
 }
