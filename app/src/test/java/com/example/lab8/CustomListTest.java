@@ -29,6 +29,8 @@ public class CustomListTest {
         mocklist.addCity(city);
         assertEquals(true, mocklist.hasCity(city));
     }
+
+
     @Test
     public void delete() {
         CustomList mocklist;
@@ -38,4 +40,15 @@ public class CustomListTest {
         mocklist.delete(city);
         assertEquals(false, mocklist.hasCity(city));
     }
+
+    @Test
+    public void count(){
+        CustomList mocklist;
+        mocklist =  new CustomList(null, new ArrayList<City>());
+        City city = new City("Edmonton", "Alberta");
+        mocklist.addCity(city);
+        mocklist.addCity(city);
+        assertTrue(mocklist.countCities() == 2);
+    }
+
 }
